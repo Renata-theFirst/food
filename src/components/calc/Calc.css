@@ -1,11 +1,5 @@
 @import '../style/style';
 
-.row {
-    display:block;
-}
-.col{
-    display:block;
-}
 
 .calculating{
     padding:50px 0
@@ -51,7 +45,7 @@
     justify-content:center
 }
 
-.calculating__choose-item{
+.calculating__choose-item {
     display:flex;
     align-items:center;
     justify-content:center;
@@ -68,15 +62,21 @@
     transition:.3s all
 }
 
-.calculating__choose-item_active{
+.calculating__choose-item_active {
     color:#fff;
     background-color:#54ed39
 }
 
-.calculating__choose_medium{
+.calculating__choose-item_error {
+    color:#ed3939;
+    font-size: 15px;
+}
+
+.calculating__choose_medium, ::after, ::before{
     width:743px;
     justify-content:space-between;
-    margin:30px auto 0 auto
+    margin:30px auto 0 auto;
+    text-align: center;
 }
 
 .calculating__choose_big{
@@ -112,3 +112,4 @@
 .calculating__result span{
     font-size:42px
 }
+
