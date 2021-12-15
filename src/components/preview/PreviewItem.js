@@ -25,28 +25,6 @@ const PreviewItem = () => {
         );
     });
 
-    function activeSlide () {
-        const slideElements = document.querySelectorAll('div.tabcontent');
-        slideElements.forEach(elem => {
-            if(!elem.classList.contains('hide')){
-                elem.classList.add('hide');
-            }
-        })
-        slideElements[id].classList.remove('hide');
-
-    }
-
-    function activeDescr () {
-        const descrElements = document.querySelectorAll('div.tabcontent__descr');
-        descrElements.forEach(elem => {
-            if(!elem.classList.contains('hide')){
-                elem.classList.add('hide');
-            }
-        })
-         descrElements[id].classList.remove('hide');
-
-    }
-
        
     useEffect(()=>{
         const listElements = document.querySelectorAll('div.tabheader__item');
@@ -59,11 +37,24 @@ const PreviewItem = () => {
         });
 
         listElements[id].classList.add('tabheader__item_active');
-        
 
+        const descrElements = document.querySelectorAll('div.tabcontent__descr');
+        descrElements.forEach(elem => {
+            if(!elem.classList.contains('hide')){
+                elem.classList.add('hide');
+            }
+        })
+         descrElements[id].classList.remove('hide');
+
+        const slideElements = document.querySelectorAll('div.tabcontent');
+        slideElements.forEach(elem => {
+            if(!elem.classList.contains('hide')){
+                elem.classList.add('hide');
+            }
+        })
+        slideElements[id].classList.remove('hide');
         
-        activeSlide();
-        activeDescr();
+        
 
     }, [id]);
 

@@ -2,11 +2,9 @@ import vegy from '../../resources/img/tabs/vegy.jpg';
 import elite from '../../resources/img/tabs/elite.jpg';
 import post from '../../resources/img/tabs/post.jpg';
 
-import './Preview.css';
 
-const  PreviewSlide = (props) => {
+const  PreviewSlide = () => {
 
-    const {id} = props;
     const slideItems = [
         <img src={vegy} alt="vegy"/>,
         <img src={elite} alt="elite"/>,
@@ -15,9 +13,9 @@ const  PreviewSlide = (props) => {
 
     ];
 
-    const renderPreviewSlide = slideItems.map((elem, id) =>{
+    const renderPreviewSlide = slideItems.map(elem =>{
         return (
-            <div className="tabcontent" hide id={id}>
+            <div className="tabcontent hide">
                 {elem }
             </div>
         );
