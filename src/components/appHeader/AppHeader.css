@@ -23,6 +23,7 @@
 .header__links{
     display:flex;
     align-items:center
+    
 }
 
 .header__link{
@@ -30,7 +31,8 @@
     margin-right:45px;
     font-weight:700;
     font-size:18px;
-    color:#303030
+    color:#303030;
+    text-decoration:none
 }
 .header__link:after{
     content:'';

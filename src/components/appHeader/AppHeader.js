@@ -1,10 +1,9 @@
-// import {useState, useEffect} from 'react';
+import {NavLink} from 'react-router-dom';
 import {Button} from 'react-bootstrap';
 import './AppHeader.css';
 import logo from '../../resources/icons/logo.svg';
 import ModalDialog from '../modal/ModalDialog';
 import { useState } from 'react';
-// import {ReactDOM} from 'react-dom'
 
 const AppHeader = () => {
   const [showModal, setShowModal] = useState(false);
@@ -55,8 +54,30 @@ console.log("render");
            <img src={logo} alt="Логотип"/>
           </div>
           <nav className="header__links">
-            <a href="/" className="header__link">Главная страница</a>
-            <a href="#" className="header__link">Калькулятор калорий</a>
+            <NavLink 
+              style={({isActive}) => {
+                return {
+                  color: isActive ? "#54ed39" : " "
+                };
+              }}
+              end 
+              to={"/"} 
+              className="header__link"
+            >
+              Главная страница
+            </NavLink>
+            <NavLink 
+              style={({isActive}) => {
+                return {
+                  color: isActive ? "#54ed39" : " "
+                };
+              }}
+              end 
+              to={"/calc"} 
+              className="header__link"
+            >
+              Калькулятор калорий
+            </NavLink>
           </nav>
         </div>
         <div className="header__right-block">
