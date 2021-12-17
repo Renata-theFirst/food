@@ -66,6 +66,12 @@ const Promotion = () =>{
             <div className="bgc_y">
             </div>
             <div className="container">
+                {/* <div className="promotion__timer">
+                    <div className="title">
+                            Осталось до конца акции:
+                    </div>
+                        {format(counter)}
+                </div> */}
                 <div className="promotion__text">
                     <div className="title">
                         Акция для новых клиентов!

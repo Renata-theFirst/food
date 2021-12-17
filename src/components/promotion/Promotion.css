@@ -14,18 +14,20 @@
     background:rgba(243,255,222,.35);
     z-index:-1;
     top:-50px;
-    left:0
+    right:0
 }
+
 
 .promotion__text{
     width:50%
 }
 
 .promotion__descr{
-    margin-top:40px;
+    margin-top:60px;
     font-size:20px;
     line-height:24px;
-    font-weight:300
+    font-weight:300;
+    text-align: left
 }
 
 .promotion__descr span{
@@ -35,7 +37,6 @@
 
 .promotion__timer{
     width:50%;
-    
 }
 
 .promotion__timer .title{
@@ -43,7 +44,7 @@
 }
 
 .promotion__timer .timer{
-    margin-top:60px;
+    margin-top:40px;
     padding-left:95px;
     display:flex;
     justify-content:space-between;
