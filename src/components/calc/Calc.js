@@ -110,7 +110,7 @@ const Calc = () => {
         
         if(isNaN(result)){
             setResult('____')
-            return;
+            // return;
         }
         if (sex === 'female') {
             const resFemale = Math.round((447.6 + (9.2 * weight) + (3.1 * height) - (4.3 * age)) * curRatio());
